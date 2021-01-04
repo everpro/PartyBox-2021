@@ -74,7 +74,6 @@
             <TextBlock x:Name="TextBox_VolStatus" HorizontalAlignment="Left" Margin="107,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" Width="344"/>
             <TextBlock x:Name="info_coctails_book" HorizontalAlignment="Left" Margin="371,406,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" Width="178"/>
         </Grid>
-        <Button x:Name="buttonMenu" Content="Eng.Menu" HorizontalAlignment="Left" Margin="677,429,0,0" VerticalAlignment="Top" Height="41" Width="113" Opacity="0.615" Click="buttonMenu_Click_1"/>
 
 
 

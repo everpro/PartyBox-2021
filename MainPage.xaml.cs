@@ -79,14 +79,14 @@ namespace PartyBox_2021
         private void InitGPIO()
         {
             var gpio = GpioController.GetDefault();
-
+/*
             if (gpio == null)
             {
                 TextBox_ReleStatus.Text = "GPIO НЕ инициализировано!";
                 return;
             }
             else TextBox_ReleStatus.Text = "GPIO инициализировано";
-
+*/
             relePin1 = gpio.OpenPin(RELE_PIN1);
             relePin2 = gpio.OpenPin(RELE_PIN2);
             relePin3 = gpio.OpenPin(RELE_PIN3);
@@ -141,7 +141,7 @@ namespace PartyBox_2021
                 volPin7.SetDriveMode(GpioPinDriveMode.InputPullDown);
                 volPin8.SetDriveMode(GpioPinDriveMode.InputPullDown);
 
-                TextBox_VolStatus.Text = "д.расх. успешн инц.";
+            //    TextBox_VolStatus.Text = "д.расх. успешн инц.";
             }
             else
             {
@@ -153,7 +153,7 @@ namespace PartyBox_2021
                 volPin6.SetDriveMode(GpioPinDriveMode.Input);
                 volPin7.SetDriveMode(GpioPinDriveMode.Input);
                 volPin8.SetDriveMode(GpioPinDriveMode.Input);
-                TextBox_VolStatus.Text = "Ошибка инц. Д.Расх";
+              //  TextBox_VolStatus.Text = "Ошибка инц. Д.Расх";
             }
 
         }
