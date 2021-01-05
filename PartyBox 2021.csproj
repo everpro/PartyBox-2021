@@ -119,6 +119,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LineState\EmptyLineState.cs" />
+    <Compile Include="LineState\IStateLine.cs" />
+    <Compile Include="LineState\Line.cs" />
+    <Compile Include="LineState\ReadyLineState.cs" />
+    <Compile Include="LineState\WorkLineState.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -154,6 +159,7 @@
       <Version>6.2.10</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
