@@ -8,74 +8,18 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="800" d:DesignHeight="480">
 
-    <Page.Resources>
-        <Style  TargetType="Button" >
-            <Setter Property="Control.Background" Value="SpringGreen" /> 
-            <Setter Property="Control.FontFamily" Value="Verdana" />
-            <Setter Property="Control.Foreground" Value="White" />
-        </Style>
-
-        <Style  TargetType="Grid" x:Key="style_grid" >
-            <Setter Property="Background" Value="#FF482D5D" />
-            <Setter Property="CornerRadius" Value="40"/>
-        </Style>
-
-    </Page.Resources>
-
-
-
     <Grid x:Name="Grid_Main" Width="800" Height="480">
-        <ScrollViewer x:Name="Scroll_Coct" HorizontalAlignment="Left" Height="480" VerticalAlignment="Top" Width="800" HorizontalScrollMode="Disabled">
-            <ScrollViewer.Content>
-                <Grid x:Name="Grid_Menu" HorizontalAlignment="Left" Height="480" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Grid.Row="10" Grid.Column="10"/>
-            </ScrollViewer.Content>
-        </ScrollViewer>
-        <TextBlock x:Name="testInfo" HorizontalAlignment="Left" Margin="10,450,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
-
-
-
-
-        <Grid x:Name="Engineering_Menu" HorizontalAlignment="Left" Height="480" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Background="#FF979797" Visibility="Visible">
-            <Grid x:Name="Grid_EngMenu_RightBlock" HorizontalAlignment="Left" Height="480" Margin="600,0,0,0" VerticalAlignment="Top" Width="150">
-                <TextBlock x:Name="textBlockSensor" HorizontalAlignment="Left" Margin="10,60,0,0" TextWrapping="Wrap" Text="Значение сенсора" VerticalAlignment="Top"/>
-                <ToggleSwitch x:Name="toggleSwitch_1" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58"  Toggled="toggleSwitch_1_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_2" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_2_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_3" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_3_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_4" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_4_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_5" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_5_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_6" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_6_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_7" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_7_Toggled"/>
-                <ToggleSwitch x:Name="toggleSwitch_8" HorizontalAlignment="Left" Margin="10,370,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58" Toggled="toggleSwitch_8_Toggled"/>
-
-                <TextBlock x:Name="sensor_TextBox_1" HorizontalAlignment="Left" Margin="80,100,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_2" HorizontalAlignment="Left" Margin="80,140,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_3" HorizontalAlignment="Left" Margin="80,180,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_4" HorizontalAlignment="Left" Margin="80,220,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_5" HorizontalAlignment="Left" Margin="80,260,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_6" HorizontalAlignment="Left" Margin="80,300,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_7" HorizontalAlignment="Left" Margin="80,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="sensor_TextBox_8" HorizontalAlignment="Left" Margin="80,380,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-                <TextBlock x:Name="FlowText" HorizontalAlignment="Left" Margin="80,420,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Foreground="#FFD2DA26"/>
-            </Grid>
-
-            <Grid x:Name="Grid_EngMenu_LeftBlock" HorizontalAlignment="Left" Height="480" Margin="0,0,0,0" VerticalAlignment="Top" Width="150">
-                <TextBox x:Name="textBox_SetSensor_1" HorizontalAlignment="Left" Margin="44,76,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_2" HorizontalAlignment="Left" Margin="44,116,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_3" HorizontalAlignment="Left" Margin="44,156,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_4" HorizontalAlignment="Left" Margin="44,196,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_5" HorizontalAlignment="Left" Margin="44,236,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_6" HorizontalAlignment="Left" Margin="44,276,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_7" HorizontalAlignment="Left" Margin="44,316,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-                <TextBox x:Name="textBox_SetSensor_8" HorizontalAlignment="Left" Margin="44,356,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-            </Grid>
-            <Button x:Name="button" Content="Начать" HorizontalAlignment="Left" Margin="165,396,0,0" VerticalAlignment="Top" Width="163" Height="40" Background="#6628B04D" Click="button_Click"/>
-            <TextBlock x:Name="TextBox_ReleStatus" HorizontalAlignment="Left" Margin="107,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" Width="344"/>
-            <TextBlock x:Name="TextBox_VolStatus" HorizontalAlignment="Left" Margin="107,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" Width="344"/>
-            <TextBlock x:Name="info_coctails_book" HorizontalAlignment="Left" Margin="371,406,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="30" Width="178"/>
-        </Grid>
-
-
+        <ToggleSwitch x:Name="toggleSwitch_1" Margin="636,102,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58"  Toggled="toggleSwitch_1_Toggled"/>
+        <TextBox Name="TexBox_ING1" HorizontalAlignment="Left" Margin="46,81,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TexBox_ING2" HorizontalAlignment="Left" Margin="46,133,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TexBox_ING3" HorizontalAlignment="Left" Margin="47,189,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TexBox_RELE_ID" HorizontalAlignment="Left" Margin="627,68,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="Button_START" Content="Start" Margin="23,323,0,0" VerticalAlignment="Top" Height="89" Width="122"/>
+        <Button x:Name="Button_STOP" Content="Stop" Margin="178,323,0,0" VerticalAlignment="Top" Height="89" Width="122"/>
+        <Button x:Name="Button_LOAD" Content="Load" Margin="0,322,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click" HorizontalAlignment="Center"/>
+        <Button x:Name="Button_CLEAR" Content="Clear" Margin="499,323,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click"/>
+        <Button x:Name="Button_TRIGGER" Content="Trigger" Margin="654,323,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click"/>
 
     </Grid>
 </Page>
