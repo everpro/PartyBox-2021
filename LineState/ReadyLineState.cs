@@ -17,7 +17,8 @@ namespace PartyBox_2021.LineState
             Console.WriteLine("Запуск розлива на линии.");
             Console.WriteLine("Линия переходит в состояние WorkLineState.");
             _line.SetState(_line.WorkLine);
-            _line.StartDispensing();
+            _line.Rele_On();
+          
             
         }
 
@@ -37,5 +38,6 @@ namespace PartyBox_2021.LineState
             Console.WriteLine("Линия переходит в состояние EmptyLineState.");
             _line.SetState(_line.EmptyLine);
         }
+
     }
 }

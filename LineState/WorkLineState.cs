@@ -13,7 +13,7 @@ namespace PartyBox_2021.LineState
         }
         public void StartDispensing()
         {
-            Console.WriteLine("Ошибка! Линия уже осуществляет розлив");
+            _line.Rele_On();
             
         }
 
@@ -22,6 +22,7 @@ namespace PartyBox_2021.LineState
             Console.WriteLine("Остановка розлива на линии.");
             Console.WriteLine("Линия переходит в состояние ReadyLineState.");
             _line.SetState(_line.ReadyLine);
+            _line.Rele_Off();
         }
 
         public void LoadLine()
@@ -33,6 +34,6 @@ namespace PartyBox_2021.LineState
         {
             Console.WriteLine("Ошибка! Линия выполняет розлив. Сначала необходимо остановить розлив.");
         }
-
+      
     }
 }

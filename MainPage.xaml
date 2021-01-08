@@ -9,17 +9,17 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="800" d:DesignHeight="480">
 
     <Grid x:Name="Grid_Main" Width="800" Height="480">
-
-        <ToggleSwitch x:Name="toggleSwitch_1" Margin="636,102,0,0" VerticalAlignment="Top" OffContent="" OnContent="" Height="30" Width="58"  Toggled="toggleSwitch_1_Toggled"/>
-        <TextBox Name="TexBox_ING1" HorizontalAlignment="Left" Margin="46,81,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TexBox_ING1" HorizontalAlignment="Left" Margin="46,81,0,0" Text="30" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Name="TexBox_ING2" HorizontalAlignment="Left" Margin="46,133,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Name="TexBox_ING3" HorizontalAlignment="Left" Margin="47,189,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <TextBox Name="TexBox_RELE_ID" HorizontalAlignment="Left" Margin="627,68,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button x:Name="Button_START" Content="Start" Margin="23,323,0,0" VerticalAlignment="Top" Height="89" Width="122"/>
-        <Button x:Name="Button_STOP" Content="Stop" Margin="178,323,0,0" VerticalAlignment="Top" Height="89" Width="122"/>
-        <Button x:Name="Button_LOAD" Content="Load" Margin="0,322,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click" HorizontalAlignment="Center"/>
-        <Button x:Name="Button_CLEAR" Content="Clear" Margin="499,323,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click"/>
-        <Button x:Name="Button_TRIGGER" Content="Trigger" Margin="654,323,0,0" VerticalAlignment="Top" Height="89" Width="122" Click="Button_STOP_Copy_Click"/>
+        <TextBox Name="TexBox_LINE_ID" HorizontalAlignment="Center" Margin="0,267,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="START" Content="Start" Margin="39,359,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="START_Click"/>
+        <Button x:Name="STOP" Content="Stop" Margin="190,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="STOP_Click"/>
+        <Button x:Name="LOAD" Content="Load" Margin="335,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="LOAD_Click"/>
+        <Button x:Name="CLEAR" Content="Clear" Margin="479,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="CLEAR_Click"/>
+        <Button x:Name="TRIGGER" Content="Trigger" Margin="617,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="TRIGGER_Click"/>
+        <Button Name="VIEW_SENSOR_VALUE" Content="See" Margin="644,289,0,0" VerticalAlignment="Top" Click="VIEW_SENSOR_VALUE_Click"/>
+        <TextBox Name="TEXTBOX_SENS" HorizontalAlignment="Left" Margin="609,158,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

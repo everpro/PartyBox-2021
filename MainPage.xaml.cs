@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Gpio;
+using PartyBox_2021.LineState;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
 
@@ -23,61 +24,63 @@ namespace PartyBox_2021
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+
+
         private int[] RELE_PIN = new int[] { 21, 20, 16, 12, 7, 8, 25, 24 };
-        private int[] VOL_PIN  = new int[] { 23, 18, 26, 13, 6, 5, 11, 9 };
-        private GpioPin[] RELE = new GpioPin[8];
-        private GpioPin[] VOL  = new GpioPin[8];
+        private int[] VOL_PIN = new int[] { 23, 18, 26, 13, 6, 5, 11, 9 };
+        Line[] LineMass ;
+        //  private GpioPinValue releValue1 = GpioPinValue.Low;
 
-
-        private GpioPinValue releValue1 = GpioPinValue.Low;
-
+        public void ButStart()
+        {
+            
+        }
       
         public MainPage()
         {
-         
-            InitGPIO();
+       
+
             this.InitializeComponent();
-        }
-
-        private void InitGPIO()
-        {
-            var gpio = GpioController.GetDefault();
-/*
-            if (gpio == null)
+            LineMass = new Line[RELE_PIN.Length];
+            for (int i=0; i<LineMass.Length; i++)
             {
-                TextBox_ReleStatus.Text = "GPIO НЕ инициализировано!";
-                return;
+                LineMass[i] = new Line(RELE_PIN[i], VOL_PIN[i]);
             }
-            else TextBox_ReleStatus.Text = "GPIO инициализировано";
-*/
-            for (int i = 0; i<RELE.Length; i++)
-            {
-                RELE[i] = gpio.OpenPin(RELE_PIN[i]);
-                VOL[i] = gpio.OpenPin(VOL_PIN[i]);
-                RELE[i].Write(GpioPinValue.Low);
-                RELE[i].SetDriveMode(GpioPinDriveMode.Output);
-                VOL[i].SetDriveMode(GpioPinDriveMode.Input);
-
-            }
-           
-        }
-
-        private void toggleSwitch_1_Toggled(object sender, RoutedEventArgs e)
-        {
             
-            int number_rele = int.Parse(TexBox_RELE_ID.Text);
+            //  InitGPIO();
 
-            if (toggleSwitch_1.IsOn)
-            {
+        }
 
-                RELE[number_rele].Write(GpioPinValue.High);
-            }
 
-            else
-            {
-                RELE[number_rele].Write(GpioPinValue.Low);
-            }
+        private void START_Click(object sender, RoutedEventArgs e)
+        {
+            LineMass[int.Parse(TexBox_LINE_ID.Text)].Task(int.Parse(TexBox_ING1.Text));
+        }
 
+        private void STOP_Click(object sender, RoutedEventArgs e)
+        {
+            LineMass[int.Parse(TexBox_LINE_ID.Text)].StopDispensing();
+        }
+
+        private void LOAD_Click(object sender, RoutedEventArgs e)
+        {
+            LineMass[int.Parse(TexBox_LINE_ID.Text)].LoadLine();
+        }
+
+        private void CLEAR_Click(object sender, RoutedEventArgs e)
+        {
+            LineMass[int.Parse(TexBox_LINE_ID.Text)].FreeTheLine();
+        }
+
+        private void TRIGGER_Click(object sender, RoutedEventArgs e)
+        {
+            LineMass[int.Parse(TexBox_LINE_ID.Text)].trigger = true;
+        }
+
+        private void VIEW_SENSOR_VALUE_Click(object sender, RoutedEventArgs e)
+        {
+          TEXTBOX_SENS.Text=Convert.ToString(LineMass[int.Parse(TexBox_LINE_ID.Text)].VOLUME_POURED);
         }
 
     }

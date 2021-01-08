@@ -14,7 +14,7 @@ namespace PartyBox_2021.LineState
 
         public void StartDispensing ()
         {
-            Console.WriteLine("Ошибка. Линия пустая, розлив невозможен");
+           // Console.WriteLine("Ошибка. Линия пустая, розлив невозможен");
         }
 
         public void StopDispensing ()
@@ -27,6 +27,7 @@ namespace PartyBox_2021.LineState
             Console.WriteLine("Запуск процедуры зыгрузки.");
             Console.WriteLine("Линия переходит в состояние ReadyLineState.");
             _line.SetState(_line.ReadyLine);
+            
         }
 
         public void FreeTheLine ()
