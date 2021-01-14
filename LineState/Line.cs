@@ -13,12 +13,14 @@ namespace PartyBox_2021.LineState
         public EmptyLineState EmptyLine { get; private set; }
 
         private GpioPin RELE_OUT;
-        private bool RELE_OUT_STATE = false;
         private GpioPin VOL_IN;
 
-       public int VOLUME_POURED = 0;
+        public int VOLUME_POURED = 0;
         int VOLUME_TARGET = 0;
         int VOLUME_LEFT = 0;
+        int DENSITY = 0;
+        int ID = 0;
+        string NAME = "";
 
         //---Переменные для теста
         public int VOLUME_TEST = 22;
@@ -50,7 +52,7 @@ namespace PartyBox_2021.LineState
             if (e.Edge == GpioPinEdge.RisingEdge)
             {
                 VOLUME_POURED++;
-                if (RELE_OUT_STATE == true && VOLUME_POURED>VOLUME_TARGET)
+                if (_currentState==WorkLine && VOLUME_POURED>VOLUME_TARGET)
                 {
                     StopDispensing();
                 }
@@ -84,22 +86,30 @@ namespace PartyBox_2021.LineState
             _currentState = state;
         }
 
-        public void Task (int VOL)          //Функция Запуска задания розлива(необходимой объем жидкости)
+        public void Task (int VOL)          //Запуск задания розлива(объем жидкости)
         {
             VOLUME_TARGET = VOL;
             StartDispensing();
         }
-        public void Rele_On()               //Функция Включения Реле
+        public void Rele_On()               // Включения Реле
         {
             RELE_OUT.Write(GpioPinValue.High);
-            RELE_OUT_STATE = true;
             VOLUME_POURED = 0;
         }
-        public void Rele_Off()              //Функция Отключения Реле
+        public void Rele_Off()              // Отключения Реле
         {
             RELE_OUT.Write(GpioPinValue.Low);
-            RELE_OUT_STATE = false;
         }
+
+        public void SetING (int id, string name, int density, int volume)
+        {
+            ID = id;
+            DENSITY = density;
+            NAME = name;
+            VOLUME_LEFT = volume;
+        }
+
+
     }
     
 }

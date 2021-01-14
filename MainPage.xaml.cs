@@ -28,7 +28,7 @@ namespace PartyBox_2021
 
 
         private int[] RELE_PIN = new int[] { 21, 20, 16, 12, 7, 8, 25, 24 };
-        private int[] VOL_PIN = new int[] { 23, 18, 26, 13, 6, 5, 11, 9 };
+        private int[] VOL_PIN = new int[] { 26, 19, 13, 6, 5, 11, 9, 10 };
         Line[] LineMass ;
         //  private GpioPinValue releValue1 = GpioPinValue.Low;
 
@@ -80,7 +80,14 @@ namespace PartyBox_2021
 
         private void VIEW_SENSOR_VALUE_Click(object sender, RoutedEventArgs e)
         {
-          TEXTBOX_SENS.Text=Convert.ToString(LineMass[int.Parse(TexBox_LINE_ID.Text)].VOLUME_POURED);
+            TEXTBOX_VOL_1.Text = Convert.ToString(LineMass[0].VOLUME_POURED);
+            TEXTBOX_VOL_2.Text = Convert.ToString(LineMass[1].VOLUME_POURED);
+            TEXTBOX_VOL_3.Text = Convert.ToString(LineMass[2].VOLUME_POURED);
+            TEXTBOX_VOL_4.Text = Convert.ToString(LineMass[3].VOLUME_POURED);
+            TEXTBOX_VOL_5.Text = Convert.ToString(LineMass[4].VOLUME_POURED);
+            TEXTBOX_VOL_6.Text = Convert.ToString(LineMass[5].VOLUME_POURED);
+            TEXTBOX_VOL_7.Text = Convert.ToString(LineMass[6].VOLUME_POURED);
+            TEXTBOX_VOL_8.Text = Convert.ToString(LineMass[7].VOLUME_POURED);
         }
 
     }

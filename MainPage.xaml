@@ -19,7 +19,14 @@
         <Button x:Name="CLEAR" Content="Clear" Margin="479,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="CLEAR_Click"/>
         <Button x:Name="TRIGGER" Content="Trigger" Margin="617,360,0,0" VerticalAlignment="Top" Height="65" Width="123" Click="TRIGGER_Click"/>
         <Button Name="VIEW_SENSOR_VALUE" Content="See" Margin="644,289,0,0" VerticalAlignment="Top" Click="VIEW_SENSOR_VALUE_Click"/>
-        <TextBox Name="TEXTBOX_SENS" HorizontalAlignment="Left" Margin="609,158,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Name="TEXTBOX_VOL_1" HorizontalAlignment="Left" Margin="156,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_2" HorizontalAlignment="Left" Margin="230,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_3" HorizontalAlignment="Left" Margin="304,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_4" HorizontalAlignment="Left" Margin="378,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_5" HorizontalAlignment="Left" Margin="451,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_6" HorizontalAlignment="Left" Margin="524,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_7" HorizontalAlignment="Left" Margin="599,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
+        <TextBox x:Name="TEXTBOX_VOL_8" HorizontalAlignment="Left" Margin="672,39,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="69"/>
 
     </Grid>
 </Page>
