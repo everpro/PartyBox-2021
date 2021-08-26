@@ -119,6 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ApparatState\Apparat.cs" />
+    <Compile Include="ApparatState\EventApState.cs" />
+    <Compile Include="ApparatState\IStateApparat.cs" />
+    <Compile Include="ApparatState\ReadyApState.cs" />
+    <Compile Include="ApparatState\SetupApState.cs" />
+    <Compile Include="ApparatState\WorkAppState.cs" />
     <Compile Include="LineState\EmptyLineState.cs" />
     <Compile Include="LineState\IStateLine.cs" />
     <Compile Include="LineState\Line.cs" />
